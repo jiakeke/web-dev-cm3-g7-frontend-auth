@@ -16,7 +16,7 @@ const Signup = () => {
   const address = useField("text");
   const profile_picture = useField("text");
 
-  const { signup, error } = useSignup("/api/users/signup");
+  const { signup, error } = useSignup(`${import.meta.env.VITE_API_PROXY_TARGET}/api/users/signup`);
 
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 

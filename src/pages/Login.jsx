@@ -9,7 +9,7 @@ const Login = () => {
   const username = useField("text");
   const password = useField("password");
 
-  const { login, error } = useLogin("/api/users/login");
+  const { login, error } = useLogin(`${import.meta.env.VITE_API_PROXY_TARGET}/api/users/login`);
 
   const { isLoggedIn } = useContext(AuthContext);
 
